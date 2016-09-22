@@ -1,1 +1,67 @@
-<h1>Topics</h1>
+<div class="row">
+	<div class="col-md-12">
+		<h1>Welcome, (USERNAME)</h1>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-offset-8 col-sm-4">
+		<input type="text" ng-model="search">
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Category</th>
+					<th>Topic</th>
+					<th>Username</th>
+					<th>Posts</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>{{ category }}</td>
+					<td>{{ topic }}</td>
+					<td>{{ username }}</td>
+					<td>{{ numPosts }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<form class="form-horizontal">
+		<div class="form-group">
+			<legend>Add a New Topic</legend>
+		</div>
+		<div class="form-group">
+			<label for="topic" class="control-label col-sm 3">Topic</label>
+			<div class="col-sm-9">
+				<input type="text" id="topic" class="form-control">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="description" class="control-label col-sm 3">Description</label>
+			<div class="col-sm-9">
+				<textarea type="text" id="description" class="form-control" rows="5"></textarea>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="category" class="control-label col-sm 3">Topic</label>
+			<div class="col-sm-9">
+				<select id="category" class="form-control">
+					<option>Molecular Biology</option>
+					<option>Cats</option>
+					<option>Technology (general)</option>
+					<option>Restaurants</option>
+					<option>Techology (specific)</option>
+					<option>Dojo Chatter</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-9 col-sm-3">
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</div>
+		</div>
+</form>
