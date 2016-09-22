@@ -8,6 +8,8 @@ myApp.controller('usersController', function($scope, $routeParams, $location, us
     console.log('This is uC.register()');
     userFactory.register(self.user, function(returned_data){
       console.log(returned_data.data);
+      self.user ={};
+      $location.path('/topics');
     })
   }
 });

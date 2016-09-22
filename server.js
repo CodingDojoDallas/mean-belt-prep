@@ -10,6 +10,8 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname + '/client')));
 app.use(express.static(path.join(__dirname + '/bower_components')));
 
+require('./server/config/routes.js')(app);
+
 app.listen(3000, function(){
 	console.log('listening on port 3000');
 })
